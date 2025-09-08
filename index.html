@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TukoPamoja — Empowering Kenyan Creators</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="description" content="TukoPamoja — decentralized quadratic funding for Kenyan creators." />
+</head>
+<body>
+  <header class="site-header gradient-bg">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="TukoPamoja Logo" class="logo" />
+        <span class="brand-text">TukoPamoja</span>
+      </a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
+      <nav id="main-nav" class="nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a class="cta" href="projects.html">Explore Projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero gradient-bg">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>We fund Kenyan creativity — transparently, fairly, together.</h1>
+          <p class="lead">TukoPamoja is a decentralized quadratic funding platform that helps creators access community-backed funding in a fair way.</p>
+          <div class="hero-actions">
+            <a class="btn" href="projects.html">Browse Projects</a>
+            <a class="btn btn-outline" href="about.html">Learn More</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="images/hero.jpg" alt="Kenyan creators" />
+        </div>
+      </div>
+    </section>
+
+    <section class="features container">
+      <article class="feature card">
+        <h3>Decentralized</h3>
+        <p>IPFS-hosted frontend + smart contracts on Celo provide transparency and censorship resistance.</p>
+      </article>
+      <article class="feature card">
+        <h3>Quadratic Funding</h3>
+        <p>Supports broad community backing — small donors gain matching power over single large donors.</p>
+      </article>
+      <article class="feature card">
+        <h3>Trust via Attestations</h3>
+        <p>On-chain attestations (e.g., "Artist") help creators build reputation and access tools.</p>
+      </article>
+    </section>
+
+    <section class="sample-projects container" aria-labelledby="sample-heading">
+      <h2 id="sample-heading">Featured Projects</h2>
+      <div id="projects-grid" class="grid">
+        <!-- Projects are injected by JS -->
+      </div>
+      <div class="center">
+        <a class="btn" href="projects.html">View All Projects</a>
+      </div>
+    </section>
+
+    <section class="how container">
+      <h2>How it works</h2>
+      <ol>
+        <li>Creators register projects (IPFS CIDs store content).</li>
+        <li>Community contributes mCUSD via wallet connection.</li>
+        <li>Quadratic Funding allocates matching funds for projects with broad support.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer gradient-bg">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>TukoPamoja</h4>
+          <p>Empowering Kenyan creators with decentralized funding.</p>
+        </div>
+        <div>
+          <h4>Links</h4>
+          <ul>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>Email: <a href="mailto:wendyaokoth@gmail.com">wendyaokoth@gmail.com</a></p>
+        </div>
+      </div>
+      <p class="muted">© <span id="year"></span> TukoPamoja — Built by Wendy Okoth</p>
+    </div>
+  </footer>
+
+  <!-- Modal for contribute flow (simulated) -->
+  <div id="contribute-modal" class="modal" aria-hidden="true">
+    <div class="modal-content card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button id="modal-close" class="modal-close" aria-label="close">×</button>
+      <h3 id="modal-title">Contribute to Project</h3>
+      <form id="contribute-form">
+        <label for="amount">Amount (KSh)</label>
+        <input id="amount" name="amount" type="number" min="1" required />
+        <p class="hint">This simulates a contribution. Integrate with MetaMask/Celo in production.</p>
+        <div class="modal-actions">
+          <button type="submit" class="btn">Contribute</button>
+          <button type="button" id="modal-cancel" class="btn btn-outline">Cancel</button>
+        </div>
+        <div id="contrib-result" class="muted"></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
