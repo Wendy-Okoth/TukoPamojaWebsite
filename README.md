@@ -66,7 +66,7 @@ TukoPamojaWebsite/
 
 - Clone the repository:
 
-git clone https://github.com/PLP-WebTechnologies/july-2025-final-project-and-deployment-Wendy-Okoth.git
+git clone https://github.com/Wendy-Okoth/TukoPamojaWebsite.git
 
 
 - Open the project folder:
